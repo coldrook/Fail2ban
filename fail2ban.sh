@@ -98,8 +98,7 @@ if [ ${OS} == CentOS ]; then
 fi
 
 if [ ${OS} == Ubuntu ] || [ ${OS} == Debian ];then
-  apt-get -y update
-  apt-get -y install fail2ban
+wget -N --no-check-certificate https://raw.githubusercontent.com/coldrook/ConfigureUbuntu/refs/heads/main/fail2ban/install.sh && chmod +x install.sh && ./install.sh
 fi
 
 #Configure
